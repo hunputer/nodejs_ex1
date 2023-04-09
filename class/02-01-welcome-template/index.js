@@ -1,13 +1,18 @@
-function getWelcomeTemplate(){
+const apple = 3;
+const banana = 2;
+
+console.log(`철수는 사과를 ${apple}개 바나나를 ${banana}개 가지고 있습니다`);
+
+function getWelcomeTemplate(name, age, school, createAt){
     const result = `
         <html>
             <body>
-                <h1>철수님 가입을 환영합니다!!!</h1>
+                <h1>${name}님 가입을 환영합니다!!!</h1>
                 <hr/>
-                <div>이름 : 철수</div>
-                <div>나이 : 13</div>
-                <div>학교 : 다람쥐초등학교</div>
-                <div>가입일 : 2020-01-02</div>
+                <div>이름 : ${name}</div>
+                <div>나이 : ${age}</div>
+                <div>학교 : ${school}</div>
+                <div>가입일 : ${createAt}</div>
             </body>
         </html>
     `
@@ -15,4 +20,9 @@ function getWelcomeTemplate(){
     console.log(result);
 }
 
-getWelcomeTemplate();
+const myname = "영희";
+const myage = 12;
+const myschool = "다람쥐초등학교";
+const mycreatedAt = "2020-01-02";
+
+getWelcomeTemplate(myname, myage, myschool, mycreatedAt);
