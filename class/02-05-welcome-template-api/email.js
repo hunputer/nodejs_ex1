@@ -1,3 +1,5 @@
+import { getToday } from "./util.js";
+
 export function checkValidationEmail(email){
     const inValid = true;
 
@@ -10,6 +12,7 @@ export function checkValidationEmail(email){
 }
 
 export function getWelcomeTemplate({name, age, school, createdAt}){
+
     const result = `
     <html>
         <body>
@@ -18,7 +21,7 @@ export function getWelcomeTemplate({name, age, school, createdAt}){
             <div>이름 : ${name}</div>
             <div>나이 : ${age}</div>
             <div>학교 : ${school}</div>
-            <div>가입일 : ${createdAt}</div>
+            <div>가입일 : ${getToday()}</div>
         </body>
     </html>
     `
