@@ -27,4 +27,9 @@ const myUser ={
     createdAt: "2020-01-02"
 }
 
-getWelcomeTemplate(myUser);
+const name = "영희"
+const age = 12
+const school = "토끼초등학교"
+const createAt = "2021-01-23"
+
+getWelcomeTemplate({name, age, school, createAt});
