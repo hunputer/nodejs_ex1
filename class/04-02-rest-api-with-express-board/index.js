@@ -1,4 +1,5 @@
 //express = require('express')
+import {checkValidationPhone, createToken, printTokenResult} from './phone.js'
 import express from 'express'
 const app = express()
 const port = 3000
@@ -27,6 +28,29 @@ app.post('/boards', (req, res) => {
   const result = [{code : 200, message:"게시물 등록에 성공하였습니다!"}]
 
   res.send(result);
+})
+
+app.post( '/tokens/phone', (req, res) => {
+
+  const aaa = req.body.myphone;
+
+   //1.휴대폰번호 자릿수 맞는지 확인하기
+    const isValid = checkValidationPhone(aaa);
+
+    if(!isValid){
+       console.log("자릿수가 틀립니다.");
+       return;     
+    }
+
+    const token = createToken(6);
+
+    if(token == -1){
+        return;
+    }
+
+    printTokenResult(aaa, token);
+
+    res.send("인증완료!!!");
 })
 
 app.listen(port, () => {
