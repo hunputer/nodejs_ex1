@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@nestjs/cli": "^9.4.0",
     "coolsms-node-sdk": "^2.0.1"
   }
 }
