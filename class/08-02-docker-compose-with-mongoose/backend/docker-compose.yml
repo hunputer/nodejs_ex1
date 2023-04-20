@@ -4,6 +4,9 @@ services:
       build:
          context: .
          dockerfile: Dockerfile
+      volumes:
+         - ./index.js:/myfolder/index.js
+         - ./email.js:/myfolder/email.js
       ports:
          - "3000:3000"
     my-database:

@@ -73,7 +73,7 @@ app.post( '/users', (req, res) =>{
       sendTemplateToEmail(user.email, mytemplate);
   }
 
-  res.send("회원가입이 완료되었습니다!!");
+  res.send("회원가입이 완료되었습니다!!!");
 })
 
 //몽고DB 접속!!
