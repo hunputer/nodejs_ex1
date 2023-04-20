@@ -5,8 +5,13 @@ console.log(aaa.getMonth() + 1)
 class Monster{
     power = 10
 
+    constructor(aaa){
+        this.power = aaa;
+    }
+
     attack = () =>{
         console.log("공격하자!!")
+        console.log("내 공격력은" + this.power + " 이야!!!")
     }
 
     run = () =>{
@@ -15,10 +20,10 @@ class Monster{
 
 }
 
-const mymonster1 = new Monster();
+const mymonster1 = new Monster(10);
 mymonster1.attack()
 mymonster1.run();
 
-const mymonster2 = new Monster();
+const mymonster2 = new Monster(50);
 mymonster2.attack();
 mymonster2.run();
