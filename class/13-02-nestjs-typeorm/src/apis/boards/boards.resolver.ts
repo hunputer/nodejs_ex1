@@ -26,6 +26,7 @@ export class BoardResolver {
     console.log(writer);
     console.log(title);
     console.log(contents);
+    console.log(createBoardInput);
 
     return this.boardService.create();
   }
